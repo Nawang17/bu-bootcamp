@@ -38,4 +38,18 @@ public class ContactTest {
         Contact c = new Contact("Alan Turing", "555-0001");
         assertTrue(c.toString().contains("555-0001"));
     }
+
+    //additional test
+
+    @Test
+void differentContacts_storeIndependentValues() {
+    Contact first = new Contact("Alice", "111-1111");
+    Contact second = new Contact("Bob", "222-2222");
+
+    assertEquals("Alice", first.getName());
+    assertEquals("111-1111", first.getPhone());
+
+    assertEquals("Bob", second.getName());
+    assertEquals("222-2222", second.getPhone());
+}
 }
